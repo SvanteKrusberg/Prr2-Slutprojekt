@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prr02-Slutprojekt-FiskeSpel", "Prr02-Slutprojekt-FiskeSpel\Prr02-Slutprojekt-FiskeSpel.csproj", "{B7449ABD-069A-463B-A1ED-FD05EA14B36A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B7449ABD-069A-463B-A1ED-FD05EA14B36A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7449ABD-069A-463B-A1ED-FD05EA14B36A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7449ABD-069A-463B-A1ED-FD05EA14B36A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7449ABD-069A-463B-A1ED-FD05EA14B36A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2079226-9E3F-447E-B32C-35BE782A91BA}
+	EndGlobalSection
+EndGlobal
