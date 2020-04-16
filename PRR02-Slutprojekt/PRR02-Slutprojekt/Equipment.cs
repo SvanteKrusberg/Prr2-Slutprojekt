@@ -9,12 +9,7 @@ namespace PRR02_Slutprojekt
     class Equipment
     {
         int durability;
-        string name;
-
-        public Equipment(string n)
-        {
-            name = n;
-        }
+        protected string name;
 
     }
 }
