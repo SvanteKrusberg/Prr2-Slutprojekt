@@ -8,9 +8,11 @@ namespace Prr02_Slutprojekt_FiskeSpel
 {
     class Fisk
     {
-        int size;
-        int value;
-        int rarity;
+        protected string name;
+        protected int size;
+        protected int value;
+        protected int rarity;
+        protected int rarityValue;
         string[] rarityLabel = { "common", "uncommon", "rare", "epic", "legendary" };
 
         public Fisk()
@@ -24,35 +26,33 @@ namespace Prr02_Slutprojekt_FiskeSpel
             if(r > 60)
             {
                 rarity = 0;
-                Console.WriteLine(r);
             }
             else if(r > 30 && r < 60)
             {
                 rarity = 1;
-                Console.WriteLine(r);
             }
             else if(r > 10 && r < 30)
             {
                 rarity = 2;
-                Console.WriteLine(r);
             }
             else if(r < 10)
             {
                 rarity = 3;
-                Console.WriteLine(r);
             }
             else
             {
                 rarity = 4;
-                Console.WriteLine(r);
             }
 
         }
 
         public void PrintStats()
         {
-            Console.WriteLine(rarityLabel[rarity]);
-            Console.WriteLine(rarity);
+            Console.WriteLine(name);
+            Console.WriteLine("Rarity: " + rarityLabel[rarity]);
+            Console.WriteLine("Size: " + size);
+            Console.WriteLine("Value: " + value);
+            Console.WriteLine();
 
         }
 

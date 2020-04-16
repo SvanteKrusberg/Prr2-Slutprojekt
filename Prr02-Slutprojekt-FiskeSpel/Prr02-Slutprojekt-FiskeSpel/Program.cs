@@ -11,11 +11,14 @@ namespace Prr02_Slutprojekt_FiskeSpel
         static void Main(string[] args)
         {
             string userInput;
-            Fisk f1 = new Fisk();
+            List<Fisk> fiskeLista = new List<Fisk>();
+
+            Fisk l1 = new Lax();
+            Fisk k1 = new Karp();
             Player p1 = new Player();
 
-            f1.PrintStats();
-            userInput = p1.Input();
+            l1.PrintStats();
+            k1.PrintStats();
 
             Console.ReadLine();
 
