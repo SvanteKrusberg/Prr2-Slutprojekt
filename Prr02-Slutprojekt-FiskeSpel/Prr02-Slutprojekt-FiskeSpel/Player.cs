@@ -92,8 +92,10 @@ namespace Prr02_Slutprojekt_FiskeSpel
             Console.WriteLine();
             Console.WriteLine("Vill du sälja fisk eller skräp?");
             Console.WriteLine();
+
             Console.WriteLine("1: Fisk");
             Console.WriteLine("2: Skräp");
+
             string userInput = Console.ReadLine();
             int userInputSiffra;
             bool lyckad = int.TryParse(userInput, out userInputSiffra);
@@ -109,7 +111,7 @@ namespace Prr02_Slutprojekt_FiskeSpel
                 PrintHeader();
                 Console.WriteLine();
 
-                Console.WriteLine("Vilken fisk vill du sälja?");
+                Console.WriteLine("Vilken fisk vill du sälja? (1 - " + fiskLista.Count + ")");
                 Console.WriteLine();
                 PrintFiskeLista();
 
@@ -151,13 +153,14 @@ namespace Prr02_Slutprojekt_FiskeSpel
 
                 if (userInputSiffra == 1)
                 {
-                    for (int i = 0; i < skräpLista.Count; i++)
+                    int loops = skräpLista.Count;
+                    for (int i = 0; i <= loops - 1; i++)
                     {
                         skräpLista.RemoveAt(skräpLista.Count-1);
-                        money = money + sellAmount;
-                        sellAmount = 0;
 
                     }
+                    money = money + sellAmount;
+                    sellAmount = 0;
                 }
 
                 else if (userInputSiffra == 2)

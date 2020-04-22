@@ -21,12 +21,12 @@ namespace Prr02_Slutprojekt_FiskeSpel
                 Console.WriteLine("1: Fiska");
                 Console.WriteLine("2: Kolla din inventory");
                 Console.WriteLine("3: Gå till butiken");
-                Console.WriteLine("3: Avsluta spelet");
+                Console.WriteLine("4: Avsluta spelet");
 
                 string userInput = Console.ReadLine();
                 int userInputSiffra;
                 bool lyckad = int.TryParse(userInput, out userInputSiffra);
-                while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 3)
+                while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 4)
                 {
                     Console.WriteLine("Skriv in ett korrekt värde!");
                     userInput = Console.ReadLine();
