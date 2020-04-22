@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Lure
+    class Lure : Equipment
     {
-        
+        int additionaFiskträff;
 
     }
 }

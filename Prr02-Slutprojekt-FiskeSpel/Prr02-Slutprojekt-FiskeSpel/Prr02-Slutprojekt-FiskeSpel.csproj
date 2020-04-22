@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bait.cs" />
+    <Compile Include="Däck.cs" />
+    <Compile Include="Fiskbar.cs" />
+    <Compile Include="FiskSpawner.cs" />
     <Compile Include="Karp.cs" />
     <Compile Include="Lax.cs" />
     <Compile Include="Lure.cs" />
@@ -53,6 +55,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rod.cs" />
+    <Compile Include="Skräp.cs" />
+    <Compile Include="Toffla.cs" />
     <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>

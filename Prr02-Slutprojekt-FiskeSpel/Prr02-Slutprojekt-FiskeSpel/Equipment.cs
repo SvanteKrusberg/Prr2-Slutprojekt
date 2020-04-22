@@ -8,5 +8,7 @@ namespace Prr02_Slutprojekt_FiskeSpel
 {
     class Equipment
     {
+        protected int price;
+        protected int durability;
     }
 }

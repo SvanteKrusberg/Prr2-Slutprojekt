@@ -8,5 +8,18 @@ namespace Prr02_Slutprojekt_FiskeSpel
 {
     class Fiskbar
     {
+        protected string name;
+        protected int size;
+        protected int value;
+
+        public virtual void PrintStats()
+        {
+            Console.WriteLine("Fångst: " + name);
+            Console.WriteLine("Vikt: " + size + " kg");
+            Console.WriteLine("Värde: " + value + " kr");
+            Console.WriteLine();
+
+        }
+
     }
 }

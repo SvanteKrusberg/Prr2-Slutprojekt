@@ -9,14 +9,9 @@ namespace Prr02_Slutprojekt_FiskeSpel
     class Fisk : Fiskbar
     {
 
-        protected string name;
-        protected int size;
-        protected int value;
         protected int rarity;
-        protected int rarityValue;
-
         string[] rarityLabel = { "common", "uncommon", "rare", "epic", "legendary" };
-
+        
         public Fisk()
         {
             DeclareRarity();
@@ -48,12 +43,36 @@ namespace Prr02_Slutprojekt_FiskeSpel
 
         }
 
-        public void PrintStats()
+        public override void PrintStats()
         {
-            Console.WriteLine(name);
-            Console.WriteLine("Rarity: " + rarityLabel[rarity]);
-            Console.WriteLine("Size: " + size);
-            Console.WriteLine("Value: " + value);
+            Console.WriteLine("Fångst: " + name);
+            Console.Write("Rarity: ");
+
+            if(rarity == 0)
+            {
+                Console.ForegroundColor = ConsoleColor.Gray;
+            }
+            else if (rarity == 1)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else if (rarity == 2)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+            }
+            else if (rarity == 3)
+            {
+                Console.ForegroundColor = ConsoleColor.Magenta;
+            }
+            else if (rarity == 4)
+            {
+                Console.ForegroundColor = ConsoleColor.Yellow;
+            }
+
+            Console.WriteLine(rarityLabel[rarity]);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("Vikt: " + size + " kg");
+            Console.WriteLine("Värde: " + value + " kr");
             Console.WriteLine();
 
         }

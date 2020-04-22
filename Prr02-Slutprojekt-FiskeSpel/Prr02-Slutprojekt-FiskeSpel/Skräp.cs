@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Rod : Equipment
+    class Skräp : Fiskbar
     {
-        int rarityIncrease;
+
+        public Skräp()
+        {
+            value = Utils.rng.Next(10, 20);
+            
+        }
 
     }
 }

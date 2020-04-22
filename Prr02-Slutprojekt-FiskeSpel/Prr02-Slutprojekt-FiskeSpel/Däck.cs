@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Rod : Equipment
+    class Däck : Skräp
     {
-        int rarityIncrease;
+        public Däck()
+        {
+            name = "Däck";
+            size = Utils.rng.Next(2, 4);
+
+        }
 
     }
 }

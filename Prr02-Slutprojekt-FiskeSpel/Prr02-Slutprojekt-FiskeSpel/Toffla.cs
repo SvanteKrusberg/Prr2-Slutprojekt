@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Bait
+    class Toffla : Skräp
     {
+        public Toffla()
+        {
+            name = "Toffla";
+            size = Utils.rng.Next(1, 2);
+
+        }
+
     }
 }
