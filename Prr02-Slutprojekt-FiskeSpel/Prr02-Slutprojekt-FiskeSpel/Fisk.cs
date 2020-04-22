@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Fisk
+    class Fisk : Fiskbar
     {
-        int size;
-        int value;
-        int rarity;
+        
         string[] rarityLabel = { "common", "uncommon", "rare", "epic", "legendary" };
 
         public Fisk()
