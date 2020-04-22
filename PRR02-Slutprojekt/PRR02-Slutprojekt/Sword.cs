@@ -8,5 +8,10 @@ namespace PRR02_Slutprojekt
 {
     class Sword : Weapon
     {
+        public Sword(string n)
+        {
+            name = n;
+        }
+
     }
 }

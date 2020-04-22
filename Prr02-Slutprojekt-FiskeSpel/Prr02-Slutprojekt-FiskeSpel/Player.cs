@@ -8,31 +8,23 @@ namespace Prr02_Slutprojekt_FiskeSpel
 {
     class Player
     {
-        public string Input()
+        public void Input(string i, string w, string v)
         {
-            string userInput;
+            i.ToLower().Trim();
             bool correctInput = false;
-
             while(correctInput == false)
             {
-                
-                userInput = Console.ReadLine();
-                userInput.ToLower().Trim();
-                if(userInput == "a"|| userInput == "b")
+                if(i == w|| i == v)
                 {
-                    return userInput;
-                    
+
 
                 }
-                else
-                {
-                    
-                }
 
-                return userInput;
+
             }
+           
 
         }
-
+        
     }
 }

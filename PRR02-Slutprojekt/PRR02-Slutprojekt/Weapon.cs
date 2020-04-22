@@ -8,5 +8,6 @@ namespace PRR02_Slutprojekt
 {
     class Weapon : Equipment
     {
+        
     }
 }

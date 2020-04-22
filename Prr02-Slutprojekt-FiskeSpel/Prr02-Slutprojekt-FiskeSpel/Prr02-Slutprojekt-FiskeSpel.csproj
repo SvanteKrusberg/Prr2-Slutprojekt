@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bait.cs" />
+    <Compile Include="Karp.cs" />
+    <Compile Include="Lax.cs" />
     <Compile Include="Lure.cs" />
     <Compile Include="Equipment.cs" />
     <Compile Include="Fisk.cs" />
