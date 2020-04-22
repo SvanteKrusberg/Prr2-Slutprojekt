@@ -77,6 +77,102 @@ namespace Prr02_Slutprojekt_FiskeSpel
                 skräpLista[i].PrintStats();
             }
         }
+        public void PrintHeader()
+        {
+            Console.Clear();
+            Console.Write("Vad vill du göra?                Pengar: ");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine(money + " kr");
+            Console.ForegroundColor = ConsoleColor.White;
+
+        }
+
+        public void Sell()
+        {
+            Console.WriteLine();
+            Console.WriteLine("Vill du sälja fisk eller skräp?");
+            Console.WriteLine();
+            Console.WriteLine("1: Fisk");
+            Console.WriteLine("2: Skräp");
+            string userInput = Console.ReadLine();
+            int userInputSiffra;
+            bool lyckad = int.TryParse(userInput, out userInputSiffra);
+            while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 2)
+            {
+                Console.WriteLine("Skriv in ett korrekt värde!");
+                userInput = Console.ReadLine();
+                lyckad = int.TryParse(userInput, out userInputSiffra);
+            }
+
+            if (userInputSiffra == 1)
+            {
+                PrintHeader();
+                Console.WriteLine();
+
+                Console.WriteLine("Vilken fisk vill du sälja?");
+                Console.WriteLine();
+                PrintFiskeLista();
+
+                userInput = Console.ReadLine();
+                lyckad = int.TryParse(userInput, out userInputSiffra);
+                while (lyckad == false || userInputSiffra < 1 || userInputSiffra >  fiskLista.Count)
+                {
+                    Console.WriteLine("Skriv in ett korrekt värde!");
+                    userInput = Console.ReadLine();
+                    lyckad = int.TryParse(userInput, out userInputSiffra);
+                }
+
+                money = money + fiskLista[userInputSiffra-1].value;
+                fiskLista.RemoveAt(userInputSiffra - 1);
+
+            }
+            else if (userInputSiffra == 2)
+            {
+                int sellAmount = 0;
+                PrintHeader();
+                for (int i = 0; i < skräpLista.Count; i++)
+                {
+                    sellAmount = sellAmount + skräpLista[i].value;
+                }
+
+                Console.WriteLine();
+                Console.WriteLine("Vill du sälja allt ditt skräp för: " + sellAmount + " kr");
+                Console.WriteLine("1: Ja");
+                Console.WriteLine("2: Nej");
+
+                userInput = Console.ReadLine();
+                lyckad = int.TryParse(userInput, out userInputSiffra);
+                while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 2)
+                {
+                    Console.WriteLine("Skriv in ett korrekt värde!");
+                    userInput = Console.ReadLine();
+                    lyckad = int.TryParse(userInput, out userInputSiffra);
+                }
+
+                if (userInputSiffra == 1)
+                {
+                    for (int i = 0; i < skräpLista.Count; i++)
+                    {
+                        skräpLista.RemoveAt(skräpLista.Count-1);
+                        money = money + sellAmount;
+                        sellAmount = 0;
+
+                    }
+                }
+
+                else if (userInputSiffra == 2)
+                {
+                    sellAmount = 0;
+                }
+            }
+
+        }
+
+        public void Buy()
+        {
+
+
+        }
 
     }
 }

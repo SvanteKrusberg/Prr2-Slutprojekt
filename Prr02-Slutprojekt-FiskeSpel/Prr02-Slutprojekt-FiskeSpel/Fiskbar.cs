@@ -10,7 +10,7 @@ namespace Prr02_Slutprojekt_FiskeSpel
     {
         protected string name;
         protected int size;
-        protected int value;
+        public int value;
 
         public virtual void PrintStats()
         {
