@@ -13,9 +13,10 @@ namespace Prr02_Slutprojekt_FiskeSpel
             Console.ForegroundColor = ConsoleColor.White;
             Player p1 = new Player();
 
+            //En bool som bestämmer varesig spelet körs eller inte
             bool gameIsRunning = true;
-            while (gameIsRunning == true){
-
+            while (gameIsRunning == true)
+            {
                 p1.PrintHeader();
                 Console.WriteLine();
                 Console.WriteLine("1: Fiska");
@@ -23,17 +24,8 @@ namespace Prr02_Slutprojekt_FiskeSpel
                 Console.WriteLine("3: Gå till butiken");
                 Console.WriteLine("4: Avsluta spelet");
 
-                string userInput = Console.ReadLine();
-                int userInputSiffra;
-                bool lyckad = int.TryParse(userInput, out userInputSiffra);
-                while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 4)
-                {
-                    Console.WriteLine("Skriv in ett korrekt värde!");
-                    userInput = Console.ReadLine();
-                    lyckad = int.TryParse(userInput, out userInputSiffra);
-                }
-
-                if(userInputSiffra == 1)
+                int userInputSiffra = Utils.Userinput(4, 1);
+                if (userInputSiffra == 1)
                 {
                     p1.Fiska();
 
@@ -69,16 +61,9 @@ namespace Prr02_Slutprojekt_FiskeSpel
                     Console.WriteLine("1: Köpa");
                     Console.WriteLine("2: Sälja");
 
-                    userInput = Console.ReadLine();
-                    lyckad = int.TryParse(userInput, out userInputSiffra);
-                    while (lyckad == false || userInputSiffra < 1 || userInputSiffra > 2)
-                    {
-                        Console.WriteLine("Skriv in ett korrekt värde!");
-                        userInput = Console.ReadLine();
-                        lyckad = int.TryParse(userInput, out userInputSiffra);
-                    }
+                    userInputSiffra = Utils.Userinput(2, 1);
 
-                    if(userInputSiffra == 1)
+                    if (userInputSiffra == 1)
                     {
                         Console.Clear();
                         p1.PrintHeader();

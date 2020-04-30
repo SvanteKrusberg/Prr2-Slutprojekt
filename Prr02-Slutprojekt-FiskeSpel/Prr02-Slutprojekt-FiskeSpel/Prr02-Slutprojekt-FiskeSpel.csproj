@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bait.cs" />
     <Compile Include="Däck.cs" />
     <Compile Include="Fiskbar.cs" />
     <Compile Include="FiskSpawner.cs" />

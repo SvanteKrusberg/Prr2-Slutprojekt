@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Prr02_Slutprojekt_FiskeSpel
 {
-    class Equipment
+    class Bait
     {
-        public int pricePerDurability;
-        public int durability;
+        int additionaFiskträff;
+
     }
 }

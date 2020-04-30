@@ -10,5 +10,26 @@ namespace Prr02_Slutprojekt_FiskeSpel
     {
         int rarityIncrease;
 
+        public Rod()
+        {
+            durability = 0;
+            rarityIncrease = 20;
+        }
+
+        public int RarityIncrease()
+        {
+            if(durability > 0)
+            {
+                durability = durability - 1;
+                return rarityIncrease;
+
+            }
+            else
+            {
+                return 0;
+            }
+
+        }
+
     }
 }
